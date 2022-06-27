@@ -3,8 +3,12 @@
   text-transform: uppercase;
 }
 
-.nav-link {
-  background-color: #403E3B;
+.title-img {
+  background: url("../assets/family_aut_21.JPEG") no-repeat;
+  background-position: right;
+  background-size: contain;
+  height: 60vh;
+  border-image-radius: 0px 0px 0px 100px;
 }
 
 .txt-xxxl {
