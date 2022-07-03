@@ -99,7 +99,7 @@
 .container-bgs {
   background-color: #F7F8F3;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 60px;
 }
 
 .icons-item {
@@ -143,6 +143,26 @@
   grid-column: 9 / span 3;
 }
 
+.guarantee-item {
+  width: 27%;
+  background: #ffff;
+  text-align: center;
+  color: #3C3F34;
+  padding: 35px 25px;
+  border: 1px solid #E7EDF3;
+  border-radius: 2px;
+}
+
+.guarantee-item:hover {
+  background: linear-gradient(98.8deg, #97BC5D 0.78%, #C0D997 98.41%);
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
+.guarantee-section:hover {
+  color: white;
+}
+
 .txt-xxxl {
   font-size: 64px;
 }
@@ -160,7 +180,7 @@
 }
 
 .txt-m {
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .txt-s {
