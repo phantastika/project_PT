@@ -220,6 +220,86 @@
   width: 33%;
 }
 
+.contactform {
+  max-width: 550px;
+  margin: 0 auto;
+  color: #fffff;
+  padding: 30px auto;
+  outline: none;
+}
+
+.form-title {
+  margin: 0 0 30px 0;
+}
+
+.contactform-item {
+  margin: 0 0 20px 0;
+}
+
+.contactform-label {
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+.contactform-input {
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border: solid 1px #c6d7c5;
+}
+
+.contactform-input:forus {
+  -webkit-box-shadow: 0 0 15 px #1a291a;
+          box-shadow: 0 0 15 px #1a291a;
+}
+
+.input-area {
+  height: 120px;
+}
+
+.contactformBotton {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 60px;
+  background: linear-gradient(156deg, #759348 0.78%, #90a66c 98.41%);
+  border-radius: 5px;
+  color: #ffff;
+  outline: none;
+  border: none;
+  border: solid 1px #c6d7c5;
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 0 linear-gradient(156deg, #2a321e 0.78%, #373c2e 98.41%);
+          box-shadow: 0 5px 0 linear-gradient(156deg, #2a321e 0.78%, #373c2e 98.41%);
+  text-transform: uppercase;
+  font-size: 24px;
+  -webkit-transition: background-color 0.5s ease 0s;
+  transition: background-color 0.5s ease 0s;
+  position: relative;
+  top: 0;
+}
+
+.contactformBotton:hover {
+  background: linear-gradient(156deg, #5a7039 0.78%, #586f32 98.41%);
+}
+
+.contactformBotton:active {
+  top: 3px;
+  -webkit-box-shadow: 0 2px 0 linear-gradient(156deg, #2a321e 0.78%, #373c2e 98.41%);
+          box-shadow: 0 2px 0 linear-gradient(156deg, #2a321e 0.78%, #373c2e 98.41%);
+}
+
 .txt-xxxl {
   font-size: 64px;
 }
