@@ -252,9 +252,11 @@
   border: solid 1px #c6d7c5;
 }
 
-.contactform-input:forus {
-  -webkit-box-shadow: 0 0 15 px #1a291a;
-          box-shadow: 0 0 15 px #1a291a;
+.contactform-input:focus {
+  -webkit-box-shadow: 0 0 15px #294129;
+          box-shadow: 0 0 15px #294129;
+  -webkit-transition: background-color 0.5s ease 0s;
+  transition: background-color 0.5s ease 0s;
 }
 
 .input-area {
