@@ -18,7 +18,7 @@
             <span class="navbar-brand">#staywithukraine</span>
             <img class="flag_ua" src="./assets/images/flag_ua.png" alt="flag_ua" />
         </div>
-        <ul class="nav nav-pills justify-content-end">
+        <ul id="navigation" class="nav nav-pills justify-content-end">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#about_us">About us</a
                     >
@@ -34,6 +34,19 @@
             </li>
         </ul>
     </nav>
+</div>
+<div class="burger-menu">
+    <input id="menu-toggle" type="checkbox" />
+    <label class="menu-btn" for="menu-toggle">
+      <span></span>
+    </label>
+
+    <ul class="menubox">
+        <li><a class="menu-item" href="#">About us</a></li>
+        <li><a class="menu-item" href="#">Why us</a></li>
+        <li><a class="menu-item" href="#">Guarantees</a></li>
+        <li><a class="menu-item" href="#">Articles</a></li>
+    </ul>
 </div>
 <div class="container px-4">
     <div class="row">
@@ -203,25 +216,7 @@
         </div>
     </div>
 </div>
-<!-- <div class="container-gallery mt-5 mb-5">
-    <div class="photo-wrap photo-wrap-lg">
-        <img class=" img-fluid photo-gallery photo-gallery-lg" src="./assets/images/cabo_de_roca.jpg">
-    </div>
-    <div class="photo-wrap photo-wrap-m">
-        <img class="img-fluid  photo-gallery photo-gallery-m" src="./assets/images/stas_honda.jpg">
-        <img class="img-fluid  photo-gallery photo-gallery-m" src="./assets/images/olya_board.jpg">
-    </div>
-    <div class="photo-wrap photo-wrap-s">
-        <img class="img-fluid photo-gallery photo-gallery-m" src="./assets/images/stas_olya_bukovel.jpg">
-        <img class="img-fluid  photo-gallery photo-gallery-m" src="./assets/images/Stas_buba_work.jpg">
-        <img class="img-fluid  photo-gallery photo-gallery-m" src="./assets/images/buba_sea.jpg.jpg">
-    </div>
-    <div class="photo-wrap photo-wrap-h">
-        <img class="img-fluid photo-gallery photo-gallery-h" src="./assets/images/stas_surf.jpeg">
-        <img class="img-fluid photo-gallery photo-gallery-h" src="./assets/images/olya_wakeboard.jpg">
-    </div>
-</div> -->
-<div class="container gallery">
+<div class=" gallery">
     <figure class="gallery__item gallery__item--1">
         <img src="./assets/images/cabo_de_roca.jpg" class="gallery__img" alt="Image 1">
     </figure>

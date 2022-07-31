@@ -13,6 +13,49 @@
             grid-column: 4 / span 6
     .guarantee-item
         width: 100%
+    .gallery
+        grid-template-columns: repeat(6, 1fr)
+        grid-template-rows: repeat(14, 13vw)
+
+    .gallery__item--1
+        grid-column-start: 1
+        grid-column-end: 4
+        grid-row-start: 1
+        grid-row-end: 8
+    .gallery__item--5
+        grid-column-start: 4
+        grid-column-end: 7
+        grid-row-start: 1
+        grid-row-end: 4
+    .gallery__item--7
+        grid-column-start: 4
+        grid-column-end: 7
+        grid-row-start: 4
+        grid-row-end: 8
+    .gallery__item--2
+        grid-column-start: 1
+        grid-column-end: 4
+        grid-row-start: 8
+        grid-row-end: 12
+    .gallery__item--4
+        grid-column-start: 4
+        grid-column-end: 7
+        grid-row-start: 8
+        grid-row-end: 11
+    .gallery__item--3
+        grid-column-start: 1
+        grid-column-end: 4
+        grid-row-start: 12
+        grid-row-end: 15
+    .gallery__item--6
+        grid-column-start: 4
+        grid-column-end: 7
+        grid-row-start: 11
+        grid-row-end: 15
+    .nav-pills
+        visibility: hidden
+    .burger-menu
+        visibility: visible
 
 @media screen and (max-width: 500px)
     .icons-wrap
@@ -26,5 +69,3 @@
         &:nth-last-child(1)
             grid-row-start: 4
             grid-column: 1 / span 12
-
-    .guarantee-section-lg

@@ -139,11 +139,12 @@
 //     width: 33%
 
 .gallery
-    max-width: 1440px
+    width: 100%
     display: grid
     grid-template-columns: repeat(12, 1fr)
-    grid-template-rows: repeat(8, 5vw)
+    grid-template-rows: repeat(7, 5vw)
     grid-gap: 12px
+    padding: 0 15px
 
 .gallery__img
     width: 100%
@@ -257,3 +258,74 @@
 
 .contactform-input._error
     box-shadow: 0 0 15px #d13206
+.burger-menu
+    visibility: hidden
+.menu-btn
+    display: flex
+    align-items: center
+    position: absolute
+    top: 28px
+    right: 15px
+    width: 26px
+    height: 26px
+    cursor: pointer
+    z-index: 1
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after
+    display: block
+    position: absolute
+    width: 100%
+    height: 2px
+    background-color: #616161
+    transition-duration: .25s
+
+.menu-btn > span::before
+    content: ''
+    top: -8px
+
+.menu-btn > span::after
+    content: ''
+    top: 8px
+.menubox
+    display: block
+    position: fixed
+    visibility: hidden
+    top: 0
+    left: -100%
+    width: 300px
+    height: 100%
+    margin: 0
+    padding: 80px 0
+    list-style: none
+    background-color: #ECEFF1
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+    transition-duration: .25s
+.menu-item
+    display: block
+    padding: 12px 24px
+    color: #333
+    font-family: 'Roboto', sans-serif
+    font-size: 20px
+    font-weight: 600
+    text-decoration: none
+    transition-duration: .25s
+    &:hover
+        background-color: #CFD8DC
+#menu-toggle:checked ~ .menu-btn > span
+    transform: rotate(45deg)
+
+#menu-toggle:checked ~ .menu-btn > span::before
+    top: 0
+    transform: rotate(0)
+
+#menu-toggle:checked ~ .menu-btn > span::after
+    top: 0
+    transform: rotate(90deg)
+
+#menu-toggle:checked ~ .menubox
+    visibility: visible
+    left: 0
+#menu-toggle
+    opacity: 0
