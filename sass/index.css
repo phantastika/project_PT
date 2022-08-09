@@ -273,9 +273,19 @@
   grid-row-end: 8;
 }
 
+.contactform-wrap {
+  background-color: #f5f5dc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .contactform {
   max-width: 550px;
-  margin: 0 auto;
   color: #fffff;
   padding: 30px auto;
   outline: none;
@@ -460,6 +470,53 @@
 
 #menu-toggle {
   opacity: 0;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.icon-sm {
+  height: 45px;
+}
+
+.unit-sm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+
+.btn-sm {
+  padding: 11px;
+  border: 1px solid white;
+  border-radius: 22px;
+  background-color: white;
+  outline: none;
+  font-family: inherit;
+  font-weight: normal;
+  cursor: pointer;
+  position: relative;
+  left: -1px;
+  width: 220px;
+  -webkit-box-shadow: 0 0 10px 5px #dddddd;
+          box-shadow: 0 0 10px 5px #dddddd;
+}
+
+.icon-sm {
+  position: absolute;
+  z-index: 1;
 }
 
 .txt-xxxl {

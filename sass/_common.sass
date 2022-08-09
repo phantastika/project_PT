@@ -196,9 +196,14 @@
     grid-row-start: 4
     grid-row-end: 8
 
+.contactform-wrap
+    background-color: #f5f5dc
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+
 .contactform
     max-width: 550px
-    margin: 0 auto
     color: #fffff
     padding: 30px auto
     outline: none
@@ -329,3 +334,33 @@
     left: 0
 #menu-toggle
     opacity: 0
+
+.social
+    display: flex
+    flex-direction: column
+
+.icon-sm
+    height: 45px
+
+.unit-sm
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+    margin-bottom: 20px
+.btn-sm
+    padding: 11px
+    border: 1px solid white
+    border-radius: 22px
+    background-color: white
+    outline: none
+    font-family: inherit
+    font-weight: normal
+    cursor: pointer
+    position: relative
+    left: -1px
+    width: 220px
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1)
+
+.icon-sm
+    position: absolute
+    z-index: 1
