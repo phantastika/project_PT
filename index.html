@@ -24,13 +24,13 @@
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Why us</a>
+                    <a class="nav-link" href="#why_us">Why us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Guarantees</a>
+                <a class="nav-link" href="#guarantees">Guarantees</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="# ">Contacts</a>
+                <a class="nav-link" href="#contacts">Contacts</a>
             </li>
         </ul>
     </nav>
@@ -42,10 +42,10 @@
     </label>
 
     <ul class="menubox">
-        <li><a class="menu-item" href="#">About us</a></li>
-        <li><a class="menu-item" href="#">Why us</a></li>
-        <li><a class="menu-item" href="#">Guarantees</a></li>
-        <li><a class="menu-item" href="#">Articles</a></li>
+        <li><a class="menu-item" href="#about_us">About us</a></li>
+        <li><a class="menu-item" href="#why_us">Why us</a></li>
+        <li><a class="menu-item" href="#guarantees">Guarantees</a></li>
+        <li><a class="menu-item" href="#contacts">Contacts</a></li>
     </ul>
 </div>
 <div class="container px-4">
@@ -143,7 +143,7 @@
     </div>
 </div>
 <div class="container-bgs mt-5">
-    <p class="h2 text-center pt-5">Why us?</p>
+    <p id="why_us" class="h2 text-center pt-5">Why us?</p>
 
     <div class="icons-section pb-5">
         <div class="icons-wrap">
@@ -196,7 +196,7 @@
 
 </div>
 <div class="container mb-5">
-    <p class="h3 text-center mb-5 mt-5">Guarantees</p>
+    <p id="guarantees" class="h3 text-center mb-5 mt-5">Guarantees</p>
     <div class="guarantee-section">
         <div class="guarantee-item">
             <h3 class="guarantee-name  txt-m mb-3">Work</h3>
@@ -241,29 +241,30 @@
 
 </div>
 
-<div class="contactform-wrap mt-5">
-    <div class="contactform">
-        <form action="#" id="contactform" class="contactform-body">
+<div id="contacts" class="contactform-wrap mt-5 pb-5">
+    <div class="form">
+        <form action="#" id="form" class="form__body">
             <p class="form-title txt-m mt-5">Contact us</p>
-            <div class="contactform-item">
-                <label for="contactformName" class="contactform-label txt-s">You name:</label>
-                <input id="contactformName" type="text" name="name" class="contactform-input _req ">
+
+            <div class="form__item">
+                <label for="forName" class="form__label txt-s">You name:</label>
+                <input id="forName" type="text" name="name" class="form__input">
             </div>
-            <div class="contactform-item">
-                <label for="contactformEmail" class="contactform-label txt-s">E-mail:</label>
-                <input id="contactformEmail" type="text" name="name" class="contactform-input _req _email ">
+
+            <div class="form__item">
+                <label for="forEmail" class="form__label txt-s">E-mail:</label>
+                <input id="forEmail" type="text" name="email" class="form__input">
             </div>
-            <div class="contactform-item">
-                <label for="contactformMessage" class="contactform-label txt-s">Text your message:</label>
-                <textarea name="formMessage" id="contactformMessage" class="contactform-input input-area _req" cols="30 " rows="10 "></textarea>
+
+            <div class="form__item">
+                <label for="formMessage" class="form__label txt-s">Text your message:</label>
+                <textarea name="message" id="formMessage" class="form__input"></textarea>
             </div>
 
             <button type="submit" class="contactformBotton ">Send</button>
-
         </form>
-
-
     </div>
+
     <div class="social">
         <p class="form-title txt-m mt-5">We are in social </p>
         <div class=" unit-sm ">
