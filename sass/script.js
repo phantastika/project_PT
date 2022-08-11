@@ -12,50 +12,54 @@ document.getElementById("navigation").addEventListener("click", ($event) => {
 })
 
 
-document.addEventListener('DOMcontentloaded'),
+document.addEventListener('DOMcontentloaded',
     function() {
-        const form = document.getElementById(contactform)
+        const form = document.getElementById('form')
         form.addEventListener('submit', formSend)
-
         async function formSend(e) {
             e.preventDefault()
 
             let error = formValidate(form)
+            if (error === 0) {} else {
+                alert('Please fill in the required fields')
+            }
+
         }
 
         function formValidate(form) {
             let error = 0
-            let formReq = document.querySelectorAll('_req')
-            for (let index = 0; index < formReq.length; index++) {
+            let formReq = document.querySelectorAll('._req')
+            for (let index = 0; index < array.lenght; index++) {
                 const input = formReq[index]
-                formRemoveErrow(input)
+                formRemoveError(input)
+
+
                 if (input.classList.contains('_email')) {
                     if (emailTest(input)) {
-                        formAddErrow(input)
-                        error++
-                    }
-                } else {
-                    if (input.value === '') {
-                        formAddErrow(input)
+                        formAddError(input)
                         error++
                     }
                 }
-
-            }
-            return error
-
-
-            function formAddErrow(input) {
-                input.parentElement.classList.add('_error')
-                input.classList.add('_error')
-            }
-
-            function formRemoveErrow(input) {
-                input.parentElement.classList.remove('_error')
-                input.classList.remove('_error')
-            }
-
-            function emailTest(input) {
-                return !/^w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
+                if (input.value === "") {
+                    formAddError(input)
+                    error++
+                }
             }
         }
+        return error
+
+        function formAddError(input) {
+            input.parentElement.classList.add('_error')
+            input.classList.add('_error')
+        }
+
+        function formRemoveError(input) {
+            input.parentElement.classList.remove('_error')
+            input.classList.remove('_error')
+        }
+
+        function emailTest(input) {
+            return !/^\w+([\.-]w+)*@+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
+        }
+
+    })

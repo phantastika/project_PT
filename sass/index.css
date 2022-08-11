@@ -326,7 +326,7 @@
   height: 120px;
 }
 
-.contactformBotton {
+.form__button {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -355,11 +355,11 @@
   top: 0;
 }
 
-.contactformBotton:hover {
+.form__button:hover {
   background: linear-gradient(156deg, #5a7039 0.78%, #586f32 98.41%);
 }
 
-.contactformBotton:active {
+.form__button:active {
   top: 3px;
   -webkit-box-shadow: 0 2px 0 linear-gradient(156deg, #2a321e 0.78%, #373c2e 98.41%);
           box-shadow: 0 2px 0 linear-gradient(156deg, #2a321e 0.78%, #373c2e 98.41%);
