@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if (hasReqFields === 0) {
             sendEmail(form)
         } else {
-            alert('Please fill in the required fields')
+            // alert('Please fill in the required fields')
+            openError()
         }
 
     }
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             formRemoveError(input)
 
             if (input.classList.contains('_email')) {
-                if (emailTest(input)) {
+                if (!emailTest(input)) {
                     formAddError(input)
                     error++
                 }
@@ -65,7 +66,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     function emailTest(input) {
-        return !/^\w+([\.-]w+)*@+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        return input.value.match(validRegex)
     }
 
     function sendEmail(form) {
@@ -75,9 +77,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
         emailjs.sendForm('service_3tx03ij', 'template_mmtbrog', form)
             .then(function() {
                 console.log('SUCCESS!');
+                openModal()
+                document.getElementById('form').reset();
+
             }, function(error) {
+
                 console.log('FAILED...', error);
             });
     }
 
+
+
+
 })
+
+function openModal() {
+    var succesModal = new bootstrap.Modal(document.getElementById('succesModal'), {
+        keyboard: false
+    });
+
+    succesModal.show();
+}
+
+function openError() {
+    var UnSuccesModal = new bootstrap.Modal(document.getElementById('UnSuccesModal'), {
+        keyboard: true
+    });
+
+    UnSuccesModal.show();
+}
