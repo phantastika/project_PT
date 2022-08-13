@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 })
 
 function openModal() {
-    var succesModal = new bootstrap.Modal(document.getElementById('succesModal'), {
+    let succesModal = new bootstrap.Modal(document.getElementById('succesModal'), {
         keyboard: false
     });
 
@@ -100,9 +100,17 @@ function openModal() {
 }
 
 function openError() {
-    var UnSuccesModal = new bootstrap.Modal(document.getElementById('UnSuccesModal'), {
+    let UnSuccesModal = new bootstrap.Modal(document.getElementById('UnSuccesModal'), {
         keyboard: true
     });
 
     UnSuccesModal.show();
 }
+
+function hideBurgerMenu() {
+    document.getElementById('menu-toggle').checked = false
+}
+
+document.getElementById('mobileLinks').querySelectorAll("a").forEach(element => {
+    element.addEventListener("click", hideBurgerMenu)
+})

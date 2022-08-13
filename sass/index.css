@@ -11,7 +11,7 @@
 
 .flag_ua {
   z-index: -1;
-  left: 50px;
+  left: 58px;
   position: absolute;
   top: -6px;
 }
@@ -428,6 +428,7 @@
           box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
   -webkit-transition-duration: .25s;
           transition-duration: .25s;
+  z-index: 5;
 }
 
 .menu-item {
