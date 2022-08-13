@@ -79,38 +79,38 @@
     <div class="row row-cards mt-5">
         <div class="col-sm-3">
             <img class="img-fluid" src="./assets/images/stas_volvo.jpg" alt="stas_volvo" />
-            <div class="card-body mt-3">
+            <div class="card-body mt-3 mb-5">
                 <h5 class="card-title text-center">Stas</h5>
                 <p class="card-text text-center">
                     Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карты.
                 </p>
-                <a href="#" class="card-link">Read more</a>
+                <a href="#stas" class="card-link">Read more</a>
             </div>
         </div>
         <div class="col-sm-3">
             <img class="img-fluid" src="./assets/images/buba_liker.jpg" alt="buba_liker" />
-            <div class="card-body mt-3">
+            <div class="card-body mt-3 mb-5">
                 <h5 class="card-title text-center">Buba</h5>
                 <p class="card-text text-center">
                     Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карты.
                 </p>
-                <a href="#" class="card-link">Reed more</a>
+                <a href="#buba" class="card-link">Reed more</a>
             </div>
         </div>
         <div class="col-sm-3">
             <img class="img-fluid" src="./assets/images/olya_wake.jpg" alt="olya_wake" />
-            <div class="card-body mt-3">
+            <div class="card-body mt-3 mb-5">
                 <h5 class="card-title text-center">Olha</h5>
                 <p class="card-text text-center">
                     Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карты.
                 </p>
-                <a href="#" class="card-link">Reed more</a>
+                <a href="#olya" class="card-link">Reed more</a>
             </div>
         </div>
     </div>
     <div class="row row-about mt-5">
         <div class="col-sm-3 mt-3">
-            <img class="img-fluid photo-about" src="./assets/images/stas_work.jpg" alt="stas_work" />
+            <img id="stas" class="img-fluid photo-about" src="./assets/images/stas_work.jpg" alt="stas_work" />
             <div class="card-body mt-3"></div>
         </div>
         <div class="col-sm-1"></div>
@@ -130,13 +130,13 @@
         </div>
         <div class="col-sm-1"></div>
         <div class="col-sm-3 mt-3">
-            <img class="img-fluid photo-about" src="./assets/images/olya_1.JPG" alt="olya_1" />
+            <img id="olya" class="img-fluid photo-about" src="./assets/images/olya_1.JPG" alt="olya_1" />
             <div class="card-body mt-3"></div>
         </div>
     </div>
     <div class="row row-about mt-5">
         <div class="col-sm-3 mt-3">
-            <img class="img-fluid photo-about" src="./assets/images/buba_ukraine.jpg" alt="buba_ukraine" />
+            <img id="buba" class="img-fluid photo-about" src="./assets/images/buba_ukraine.jpg" alt="buba_ukraine" />
             <div class="card-body mt-3"></div>
         </div>
         <div class="col-sm-1"></div>
@@ -265,37 +265,37 @@
 
             <div class="form__item">
                 <label for="formMessage" class="form__label txt-xxs">Text your message:</label>
-                <textarea name="message" id="formMessage" class="form__input _req txt-xxs"></textarea>
+                <textarea name="message" id="formMessage" class="message_text form__input _req txt-xxs"></textarea>
             </div>
 
-            <button type="submit" class="form__button">Send</button>
+            <button type="submit " class="form__button ">Send</button>
         </form>
     </div>
 
-    <div class="social">
-        <p class="form-title txt-m mt-5">We are in social </p>
+    <div class="social ">
+        <p class="form-title txt-m mt-5 ">We are in social </p>
         <div class=" unit-sm ">
             <img class="icon-sm " src="./assets/images/icon_tg.png " alt="ig_stas ">
-            <form target="_blank">
-                <button class="btn-sm" formaction="https://t.me/lokisxyz">Stas</button>
+            <form target="_blank ">
+                <button class="btn-sm " formaction="https://t.me/lokisxyz ">Stas</button>
             </form>
         </div>
         <div class=" unit-sm ">
-            <img class="icon-sm " src="./assets/images/icon_ig.png" alt="tg_stas ">
-            <form target="_blank">
-                <button class="btn-sm" formaction="https://instagram.com/stas_blokh?igshid=YmMyMTA2M2Y=">Stas</button>
+            <img class="icon-sm " src="./assets/images/icon_ig.png " alt="tg_stas ">
+            <form target="_blank ">
+                <button class="btn-sm " formaction="https://instagram.com/stas_blokh?igshid=YmMyMTA2M2Y=">Stas</button>
             </form>
         </div>
         <div class=" unit-sm ">
-            <img class="icon-sm " src="./assets/images/icon_tg.png" alt="tg_olya ">
-            <form target="_blank">
-                <button class="btn-sm" formaction="https://t.me/phantastika">Olha</button>
+            <img class="icon-sm " src="./assets/images/icon_tg.png " alt="tg_olya ">
+            <form target="_blank ">
+                <button class="btn-sm " formaction="https://t.me/phantastika ">Olha</button>
             </form>
         </div>
         <div class="unit-sm ">
             <img class="icon-sm " src="./assets/images/icon_ig.png " alt="ig_stas ">
-            <form target="_blank">
-                <button class="btn-sm" formaction="https://www.instagram.com/buba_the_frenchie/">Buba</button>
+            <form target="_blank ">
+                <button class="btn-sm " formaction="https://www.instagram.com/buba_the_frenchie/ ">Buba</button>
             </form>
         </div>
 
@@ -305,42 +305,42 @@
 
 </div>
 
-<div class="modal" tabindex="-1" id="succesModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title txt-m">Thank you</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal " tabindex="-1 " id="succesModal ">
+    <div class="modal-dialog ">
+        <div class="modal-content ">
+            <div class="modal-header ">
+                <h5 class="modal-title txt-m ">Thank you</h5>
+                <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
             </div>
-            <div class="modal-body">
-                <p class="txt-s">Your message was successfully sent</p>
+            <div class="modal-body ">
+                <p class="txt-s ">Your message was successfully sent</p>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="modal-footer ">
+                <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
 
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal" tabindex="-1" id="UnSuccesModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title txt-m">Error</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal " tabindex="-1 " id="UnSuccesModal ">
+    <div class="modal-dialog ">
+        <div class="modal-content ">
+            <div class="modal-header ">
+                <h5 class="modal-title txt-m ">Error</h5>
+                <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
             </div>
-            <div class="modal-body">
-                <p class="txt-s">Please fill in the required fields or check the correctness of your email</p>
+            <div class="modal-body ">
+                <p class="txt-s ">Please fill in the required fields or check the correctness of your email</p>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="modal-footer ">
+                <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
 
             </div>
         </div>
     </div>
 </div>
-<button onclick="hideBurgerMenu()">hello</button>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
 <script src="./sass/script.js "></script>

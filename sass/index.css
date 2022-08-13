@@ -45,6 +45,10 @@
           align-items: center;
 }
 
+.card-link:hover {
+  color: var(--bs-link-hover-color);
+}
+
 .row-more {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,7 +63,7 @@
   border-right: 2px solid #0d6efd;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  margin-top: 5px;
+  margin-top: 2px;
   margin-left: 5px;
 }
 
@@ -322,8 +326,10 @@
   transition: background-color 0.5s ease 0s;
 }
 
-.input-area {
+.message_text.form__input {
   height: 120px;
+  resize: vertical;
+  padding: 15px;
 }
 
 .form__button {
