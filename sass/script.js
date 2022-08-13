@@ -11,55 +11,73 @@ document.getElementById("navigation").addEventListener("click", ($event) => {
 
 })
 
+document.addEventListener("DOMContentLoaded", function(event) {
 
-document.addEventListener('DOMcontentloaded',
-    function() {
-        const form = document.getElementById('form')
-        form.addEventListener('submit', formSend)
-        async function formSend(e) {
-            e.preventDefault()
+    const form = document.getElementById('form')
+    form.addEventListener('submit', formSend)
 
-            let error = formValidate(form)
-            if (error === 0) {} else {
-                alert('Please fill in the required fields')
-            }
+    async function formSend(formData) {
 
+        formData.preventDefault()
+
+        let hasReqFields = formValidate(form)
+        if (hasReqFields === 0) {
+            sendEmail(form)
+        } else {
+            alert('Please fill in the required fields')
         }
 
-        function formValidate(form) {
-            let error = 0
-            let formReq = document.querySelectorAll('._req')
-            for (let index = 0; index < array.lenght; index++) {
-                const input = formReq[index]
-                formRemoveError(input)
+    }
+
+    function formValidate(form) {
+        let error = 0
+        let formReq = document.querySelectorAll('._req')
 
 
-                if (input.classList.contains('_email')) {
-                    if (emailTest(input)) {
-                        formAddError(input)
-                        error++
-                    }
-                }
-                if (input.value === "") {
+        for (let i = 0; i < formReq.length; i++) {
+
+            const input = formReq[i]
+            formRemoveError(input)
+
+            if (input.classList.contains('_email')) {
+                if (emailTest(input)) {
                     formAddError(input)
                     error++
                 }
             }
+
+            if (input.value === "") {
+                formAddError(input)
+                error++
+            }
         }
         return error
+    }
 
-        function formAddError(input) {
-            input.parentElement.classList.add('_error')
-            input.classList.add('_error')
-        }
+    function formAddError(input) {
+        input.parentElement.classList.add('_error')
+        input.classList.add('_error')
+    }
 
-        function formRemoveError(input) {
-            input.parentElement.classList.remove('_error')
-            input.classList.remove('_error')
-        }
+    function formRemoveError(input) {
+        input.parentElement.classList.remove('_error')
+        input.classList.remove('_error')
+    }
 
-        function emailTest(input) {
-            return !/^\w+([\.-]w+)*@+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
-        }
+    function emailTest(input) {
+        return !/^\w+([\.-]w+)*@+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
+    }
 
-    })
+    function sendEmail(form) {
+        // generate a five digit number for the contact_number variable
+        form.contact_number.value = Math.random() * 100000 | 0;
+        // these IDs from the previous steps
+        emailjs.sendForm('service_3tx03ij', 'template_mmtbrog', form)
+            .then(function() {
+                console.log('SUCCESS!');
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+    }
+
+})
