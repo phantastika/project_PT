@@ -1,17 +1,22 @@
 "use strict"
 
-document.getElementById("navigation").addEventListener("click", ($event) => {
-    document.getElementById("navigation").querySelectorAll("a").forEach(element => {
-        element.classList.remove("active")
-        if (element.text === $event.target.firstChild.nodeValue) {
-            element.classList.add("active")
-        }
-
-    });
-
-})
-
 document.addEventListener("DOMContentLoaded", function(event) {
+
+    document.getElementById("navigation").addEventListener("click", ($event) => {
+        document.getElementById("navigation").querySelectorAll("a").forEach(element => {
+            element.classList.remove("active")
+            if (element.text === $event.target.firstChild.nodeValue) {
+                element.classList.add("active")
+            }
+        });
+    })
+
+    document.getElementById('mobileLinks').querySelectorAll("a").forEach(element => {
+        element.addEventListener("click", hideBurgerMenu)
+    })
+
+    let mybutton = document.getElementById("topBtn");
+    window.onscroll = function() { scrollFunction() };
 
     const form = document.getElementById('form')
     form.addEventListener('submit', formSend)
@@ -86,8 +91,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
             });
     }
 
-
-
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
 
 })
 
@@ -100,17 +110,18 @@ function openModal() {
 }
 
 function openError() {
-    let UnSuccesModal = new bootstrap.Modal(document.getElementById('UnSuccesModal'), {
+    let unSuccesModal = new bootstrap.Modal(document.getElementById('unSuccesModal'), {
         keyboard: true
     });
 
-    UnSuccesModal.show();
+    unSuccesModal.show();
 }
 
 function hideBurgerMenu() {
     document.getElementById('menu-toggle').checked = false
 }
 
-document.getElementById('mobileLinks').querySelectorAll("a").forEach(element => {
-    element.addEventListener("click", hideBurgerMenu)
-})
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
